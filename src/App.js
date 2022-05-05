@@ -20,10 +20,10 @@ function App() {
 
   const searchRecipes = async () => {
     setIsLoading(true);
-    const q = query(collection(db, "Recipes"))
-    const unsub = onSnapshot(q, (querySnapshot) => {
-    console.log("Data", querySnapshot.docs.map(d => d.data()));
-    });
+    // const q = query(collection(db, "Recipes"))
+    // const unsub = onSnapshot(q, (querySnapshot) => {
+    // console.log("Data", querySnapshot.docs.map(d => d.data()));
+    // });
     const url = apiUrl + searchQuery;
     const res = await axios.get(url);
     const data = await res.data;
